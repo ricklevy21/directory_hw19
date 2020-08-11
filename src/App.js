@@ -7,11 +7,11 @@ import DataArea from './components/DataArea'
 function App() {
   return (
     <div className="App">
-      <>
         <Header />
+      <div className="container">
         <SearchNav />
         <DataArea />
-      </>
+      </div>
     </div>
   );
 }
