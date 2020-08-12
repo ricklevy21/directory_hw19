@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header'
 import SearchNav from './components/SearchNav'
-import DataArea from './components/DataArea'
+import DataContainer from './components/DataContainer'
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Header />
       <div className="container">
         <SearchNav />
-        <DataArea />
+        <DataContainer />
       </div>
     </div>
   );

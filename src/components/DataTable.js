@@ -2,8 +2,9 @@
 import React from 'react'
 import DataBody from './DataBody'
 
-const DataTable = () => {
+const DataTable = (props) => {
     //code
+    console.log(props)
 
     return (
         <table className="table table-striped table-hover">
