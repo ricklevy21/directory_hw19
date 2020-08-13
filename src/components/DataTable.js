@@ -1,10 +1,18 @@
 //dependencies
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+//components
 import DataBody from './DataBody'
 
-const DataTable = (props) => {
+const DataTable = () => {
     //code
-    console.log(props)
+    const [employees, setEmployees] =useState([])
+
+    useEffect(() => {
+        axios.get("https://randomuser.me/api/?results=50&nat=us")
+        .then(res => setEmployees(res.data.results))
+        .catch(err => console.log(err))
+    }, [])
 
     return (
         <table className="table table-striped table-hover">
@@ -27,7 +35,15 @@ const DataTable = (props) => {
                     </th>
                 </tr>
             </thead>
-            <DataBody />
+            {employees.map((employee, index) => {
+                return (
+
+                    <DataBody
+                    key={index}
+                    employee={employee}
+                    />
+                )
+            })}
         </table>
     )
 }

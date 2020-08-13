@@ -1,9 +1,11 @@
 //dependencies
 import React from 'react'
+
+//components
 import DataTable from './DataTable'
 
 
-function DataContainer() {
+const DataContainer = () => {
         return(
             <>
             <DataTable />

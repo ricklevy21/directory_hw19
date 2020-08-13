@@ -1,16 +1,16 @@
 //dependencies
 import React from 'react'
 
-const DataBody = (props) => {
+const DataBody = ( {employee} ) => {
     //code
     return (
         <tbody>
             <tr>
-                <td><img className="img-fluid" alt={props.name} src={props.src}></img> </td>
-                <td>{props.name}</td>
-                <td>{props.phone}</td>
-                <td>{props.email}</td>
-                <td>{props.dob}</td>
+                <td><img className="img-fluid" alt={`${employee.name.first} ${employee.name.last}`} src={employee.picture.thumbnail} /> </td>
+                <td>{`${employee.name.first} ${employee.name.last}`}</td>
+                <td>{employee.phone}</td>
+                <td>{employee.email}</td>
+                <td>{employee.dob.date}</td>
             </tr>
         </tbody>
     )
