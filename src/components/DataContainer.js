@@ -5,10 +5,13 @@ import React from 'react'
 import DataTable from './DataTable'
 
 
-const DataContainer = () => {
+const DataContainer = ({employees}) => {
         return(
             <>
-            <DataTable />
+            <DataTable
+            //propping down employees that was set in App.js
+            employees={employees}
+            />
 
             </>
         )

@@ -1,18 +1,11 @@
 //dependencies
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
 //components
 import DataBody from './DataBody'
 
-const DataTable = () => {
+const DataTable = ( {employees} ) => {
     //code
-    const [employees, setEmployees] =useState([])
-
-    useEffect(() => {
-        axios.get("https://randomuser.me/api/?results=50&nat=us")
-        .then(res => setEmployees(res.data.results))
-        .catch(err => console.log(err))
-    }, [])
+    
 
     return (
         <table className="table table-striped table-hover">
