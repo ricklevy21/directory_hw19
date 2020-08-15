@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 //components
 import DataBody from './DataBody'
 
-const DataTable = ( {employees} ) => {
+const DataTable = ( {employees, employeeSort} ) => {
     //code
     
 
@@ -14,7 +14,11 @@ const DataTable = ( {employees} ) => {
                     <th>
                         Image
                     </th>
-                    <th>
+                    <th
+                    onClick={()=>{
+                        employeeSort()
+                    }}
+                    >
                         Name
                     </th>
                     <th>
