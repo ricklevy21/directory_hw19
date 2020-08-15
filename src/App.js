@@ -40,15 +40,18 @@ function App() {
     //method to sort employees by name. Will prop down to DataTable. this is a functional component
     const employeeSort = () => {
       console.log('inisde of employee sort')
-      const sortResults = employees.sort((a, b) => {
+      const sortEmpl = [...employees]
+  
+      const sortResults = sortEmpl.sort((a, b) => {
         if (a.name.last > b.name.last) {
           return 1
         } else {
           return -1
         }
       })
+
       setFilteredEmployees(sortResults)
-      console.log(sortResults)
+  
     }
 
   return (
